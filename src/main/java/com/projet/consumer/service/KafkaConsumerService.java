@@ -24,9 +24,9 @@ public class KafkaConsumerService {
 
     @KafkaListener(topics = {"project-description-topic"}, groupId = "group-id", containerFactory="kafkaListenerContainerFactory")
     public void consumeMessage( ProjectDescription projectDescription) {
-       Double XID  = projectDescription.getProjectDescription().getId();
+       String XID  = projectDescription.getProjectDescription().getStringId().toString() ;
         ProjectDescriptionConsumer project = projectDescription.getProjectDescription();
-
+            project.setId(XID);
         if (project != null && "create".equals(projectDescription.getEventType())) {
             try {
                 projectDescriptionRepository.save(project);

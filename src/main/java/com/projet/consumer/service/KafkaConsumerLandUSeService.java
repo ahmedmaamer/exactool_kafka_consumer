@@ -20,7 +20,7 @@ public class KafkaConsumerLandUSeService {
 
 
     //@KafkaListener(topics = {"Land-use-topic"}, groupId = "group-id")
-    @KafkaListener(topics = {"land-use-topic"}, groupId = "group-id" , containerFactory = "kafkaListenerContainerLandFactory")
+    @KafkaListener(topics = {"land-use-topic"}, groupId = "group-id1" , containerFactory = "kafkaListenerContainerLandFactory")
     public void consume( OtherLandUseChanges otherLandUseChanges) {
         Double XID  = otherLandUseChanges.getOtherLandUseChanges().getId();
         OtherLandUseChangesConsumer landUse = otherLandUseChanges.getOtherLandUseChanges();

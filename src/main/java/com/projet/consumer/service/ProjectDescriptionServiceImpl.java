@@ -20,7 +20,7 @@ public class ProjectDescriptionServiceImpl implements ProjectDescriptionService 
     }
 
     @Override
-    public Optional<ProjectDescriptionConsumer> getProjectDescriptionById(Double id) {
+    public Optional<ProjectDescriptionConsumer> getProjectDescriptionById(String id) {
         return projectDescriptionRepository.findById(id);
     }
 

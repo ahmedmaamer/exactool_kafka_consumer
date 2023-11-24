@@ -15,7 +15,8 @@ import java.util.UUID;
 @Document(collection = "project_descriptions")
 public class ProjectDescriptionConsumer {
     @Id
-    private Double id;
+    private String id;
+    private String StringId ;
     private String userName;
     private LocalDate date;
     private String projectName;

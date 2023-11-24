@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface ProjectDescriptionService {
     List<ProjectDescriptionConsumer> getAllProjectDescriptions();
-    Optional<ProjectDescriptionConsumer> getProjectDescriptionById(Double id);
+    Optional<ProjectDescriptionConsumer> getProjectDescriptionById(String id);
 
 }

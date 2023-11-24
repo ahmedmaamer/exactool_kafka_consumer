@@ -1,8 +1,7 @@
 package com.projet.consumer.models;
-
 public enum ProjectStatus {
-    IMPLEMENTATION,
-    DESIGN,
-    COMPLETED,
-    OTHER
+    Completed,
+    In_progress,
+    On_hold,
+    Cancelled
 }

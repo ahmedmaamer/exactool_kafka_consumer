@@ -28,7 +28,7 @@ public class ProjectDescriptionController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjectDescriptionConsumer> getProjectDescriptionById(@PathVariable("id") Double id) {
+    public ResponseEntity<ProjectDescriptionConsumer> getProjectDescriptionById(@PathVariable("id") String id) {
         Optional<ProjectDescriptionConsumer> projectDescription = projectDescriptionService.getProjectDescriptionById(id);
         return projectDescription.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
